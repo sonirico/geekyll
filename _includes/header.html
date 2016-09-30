@@ -1,0 +1,15 @@
+<div class="header clearfix">
+    <nav>
+        {% if site.navigation | size > 0 %}
+        <ul class="nav nav-pills pull-right">
+            {% include navigation.html %}
+        </ul>
+        {% endif %}
+        {% comment %} //TODO: Show alternatives if else ? {% endcomment %}
+    </nav>
+    <h3 class="text-muted">
+        <a href="{{ site.url }}" >
+            {{ site.title }}
+        </a>
+    </h3>
+</div>

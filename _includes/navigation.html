@@ -1,0 +1,13 @@
+{% for link in site.navigation %}
+    {% if page.url == link.nice_url %}
+    
+        <li role="presentation" class="active" >
+    {% else %}
+        <li role="presentation">
+    {% endif %}
+            <a  title="{{ link.display_name }}"
+                href="{{ link.nice_url | prepend: site.url }}">
+                {{ link.display_name }}
+            </a>
+        </li>                
+{% endfor %}
