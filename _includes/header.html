@@ -1,28 +1,13 @@
-
-<nav class="navbar" role="navigation">
-      
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>  
-
-    <div class="collapse navbar-collapse" id="main-navbar">
-        <nav>
-        {% if site.navigation | size > 0 %}
-            <ul class="nav nav-pills pull-right">
-                {% include navigation.html %}
-            </ul>
-        {% endif %}
-        {% comment %} //TODO: Show alternatives if else ? {% endcomment %}
-        </nav>
-        <h3 class="text-muted">
-            <a href="{{ site.url }}" >
-                {{ site.title }}
-            </a>
-        </h3>
-    </div>
-</nav>
+<div class="container">
+      <nav class="navbar navbar-light bg-faded">
+        <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header">
+          &#9776;
+        </button>
+        <div class="collapse navbar-toggleable-xs" id="navbar-header">
+          <a class="navbar-brand" href="{{ site.url }}">{{ site.title }}</a>
+          <ul class="nav navbar-nav pull-xs-right">
+              {% include navigation.html %}
+          </ul>
+        </div>
+      </nav> <!-- /navbar -->
+</div>
