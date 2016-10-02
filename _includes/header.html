@@ -1,15 +1,28 @@
-<div class="header clearfix">
-    <nav>
+
+<nav class="navbar" role="navigation">
+      
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>  
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+        <nav>
         {% if site.navigation | size > 0 %}
-        <ul class="nav nav-pills pull-right">
-            {% include navigation.html %}
-        </ul>
+            <ul class="nav nav-pills pull-right">
+                {% include navigation.html %}
+            </ul>
         {% endif %}
         {% comment %} //TODO: Show alternatives if else ? {% endcomment %}
-    </nav>
-    <h3 class="text-muted">
-        <a href="{{ site.url }}" >
-            {{ site.title }}
-        </a>
-    </h3>
-</div>
+        </nav>
+        <h3 class="text-muted">
+            <a href="{{ site.url }}" >
+                {{ site.title }}
+            </a>
+        </h3>
+    </div>
+</nav>
