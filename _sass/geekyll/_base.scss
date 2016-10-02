@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
-=======
->>>>>>> feature-header
 body {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -22,4 +17,6 @@ body {
   margin: 2rem 0;
 }
 
-* { outline: none !important;}
+
+/* Remove that ugly outline effect */
+* { outline: none !important; }
