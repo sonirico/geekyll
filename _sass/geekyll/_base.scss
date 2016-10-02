@@ -1,3 +1,4 @@
+
 body {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -16,3 +17,6 @@ body {
 .container-narrow > hr {
   margin: 2rem 0;
 }
+
+/* Remove that ugly outline effect */
+* { outline: none !important; }
