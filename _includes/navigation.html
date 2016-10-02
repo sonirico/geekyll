@@ -1,13 +1,13 @@
-{% for link in site.navigation %}
-    {% assign is_current = page.url == link.nice_url %}
+{% for c_page in custom_pages %}
+    {% assign is_current = page.url == c_page.url %}
     {% if is_current %}    
-        <li role="presentation" class="active" >
+        <li role="presentation" class="nav-item active" >
     {% else %}
-        <li role="presentation">
+        <li role="presentation" class="nav-item" >
     {% endif %}
-            <a  title="{{ link.display_name }}"
-                href="{{ link.nice_url | prepend: site.url }}">
-                {{ link.display_name }}
+            <a  title="{{ c_page.title }}"
+                href="{{ c_page.url | prepend: site.url }}" class="nav-link">
+                {{ c_page.title }}
                 {% if is_current %}
                 <span class="sr-only">(página actual)</span>
                 {% endif %}
