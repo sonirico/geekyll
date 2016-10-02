@@ -1,0 +1,23 @@
+<<<<<<< Updated upstream
+=======
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+/* Customize container */
+@media (min-width: 48em) {
+  .container {
+    max-width: 46rem;
+  }
+}
+.container-narrow > hr {
+  margin: 2rem 0;
+}
+
+* { outline: none !important;}
+>>>>>>> Stashed changes
