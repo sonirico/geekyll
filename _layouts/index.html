@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+{% assign custom_pages = site.pages | where: 'indexable', true | sort: 'priority' | reverse %}
+
+{% include header.html %}
+
+{% for c_page in custom_pages %}
+<div class="container" >
+    <p>{{ c_page.content }}</p>
+</div>
+{% endfor %}
+
+
+{% include footer.html %}
+{% include javascripts.html %}
+
