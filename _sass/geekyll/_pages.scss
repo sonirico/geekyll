@@ -1,0 +1,12 @@
+
+.us-page {
+    .card {
+        img {
+            @extend .img-rounded;
+            @extend .m-x-auto;
+            @extend .d-block;
+            width: 40%;
+            margin-top: 2rem;
+        }
+    }
+}

@@ -7,8 +7,8 @@ layout: root
 {% include header.html %}
 
 {% for c_page in custom_pages %}
-<div class="container" >
-    <p>{{ c_page.content }}</p>
+<div class="container {{ c_page.class | default: '' }}" >
+    {{ c_page.content }}
 </div>
 {% endfor %}
 
