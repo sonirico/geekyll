@@ -1,5 +1,6 @@
 ---
 layout: root
+class: full_page
 ---
 
 {% assign custom_pages = site.pages | where: 'indexable', true | sort: 'priority' | reverse %}
@@ -7,8 +8,9 @@ layout: root
 {% include header.html %}
 
 {% for c_page in custom_pages %}
+
 <div class="container {{ c_page.class | default: '' }}" >
-    {{ c_page.content }}
+    {{ c_page.content | liquefy }}
 </div>
 {% endfor %}
 
