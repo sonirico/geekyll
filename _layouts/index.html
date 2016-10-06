@@ -1,20 +1,26 @@
----
-layout: root
-class: full_page
----
+--- 
+layout: root 
+class: full_page 
+--- 
 
 {% assign custom_pages = site.pages | where: 'indexable', true | sort: 'priority' | reverse %}
 
 {% include header.html %}
 
 {% for c_page in custom_pages %}
-
-<div class="container {{ c_page.class | default: '' }}" >
-    {{ c_page.content | liquefy }}
+<div class="container {{ c_page.class | default: '' }}">
+    <section role="main">
+        <article>
+            <header>
+                <h2 class="text-xs-center">{{ c_page.title }}</h2>
+            </header>
+            <main>
+                {{ c_page.content | liquefy }}
+            </main>
+        </article>
+    </section>
 </div>
 {% endfor %}
 
-
-{% include footer.html %}
+{% include footer.html %} 
 {% include javascripts.html %}
-

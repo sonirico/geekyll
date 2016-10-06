@@ -1,9 +1,20 @@
-
-        img {
-            @extend .img-rounded;
-            @extend .m-x-auto;
-            @extend .d-block;
-            @extend .img-fluid;
-            width: 40%;
-            margin-top: 2rem;
+.container {
+    section[role="main"] {
+        h1, h2, h3, h4, h5 {
+            @extend .text-xs-center;
         }
+    }
+}
+
+// Features "nosotros" section
+
+.us-page {
+    img {
+        @extend .img-rounded;
+        @extend .m-x-auto;
+        @extend .d-block;
+        @extend .img-fluid;
+        width: 40%;
+        margin: 2rem;
+    }
+}

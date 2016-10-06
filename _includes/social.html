@@ -1,0 +1,10 @@
+{% for social in include.social %}
+    {% for registered_social in site.data.social %}
+    {{registered.social}}
+        {% if social[registered_social] %}
+        <a href="#" >{{ social[registered_social] }}</a>
+
+        {% break %}
+        {% endif %}
+    {% endfor %}
+{% endfor %}

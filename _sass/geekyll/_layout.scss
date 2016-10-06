@@ -3,8 +3,30 @@ body {
   padding-bottom: 20px;
 }
 
+
+$background-color: white;//#fffef2;
+$main-color: #4785ff;
+// Header
+
 .navbar {
   margin-bottom: 20px;
+  background-color: $background-color;
+  border: 2px solid $main-color;
+  border-radius: 0.25rem;
+
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+      }
+    }
+  }
+
+  // toogle menu button
+  .navbar-toggler {
+    border: 2px solid $main-color;
+    color: $main-color;
+  } 
+  
 }
 
 /* Customize container */
