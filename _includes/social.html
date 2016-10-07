@@ -1,5 +1,6 @@
 {% assign user_socials = include.social %}
 
+<div class="social-container" >
 {% for u_social in user_socials %}
     {% assign u_social_platform = u_social[0] %}
     {% assign u_social_username = u_social[1] %}
@@ -11,3 +12,4 @@
         --></a>
     {% endif %}
 {% endfor %}
+</div>
