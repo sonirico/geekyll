@@ -1,10 +1,13 @@
-{% for social in include.social %}
-    {% for registered_social in site.data.social %}
-    {{registered.social}}
-        {% if social[registered_social] %}
-        <a href="#" >{{ social[registered_social] }}</a>
+{% assign user_socials = include.social %}
 
-        {% break %}
-        {% endif %}
-    {% endfor %}
+{% for u_social in user_socials %}
+    {% assign u_social_platform = u_social[0] %}
+    {% assign u_social_username = u_social[1] %}
+
+    {% assign r_social = site.data.social  | where: 'platform', u_social_platform | first %}
+    {% if r_social %}
+        <a href="{{ r_social.url }}/{{ u_social_username }}" title="Check my {{ r_social.name }} profile" ><!--
+            --><i class="svg-icon {{ r_social.icon }}" aria-hidden="true" ></i><!--
+        --></a>
+    {% endif %}
 {% endfor %}
