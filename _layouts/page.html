@@ -2,9 +2,15 @@
 layout: default
 ---
 
-{% include header.html %}
-
-{{ content }}
-
-{% include footer.html %}
-{% include javascripts.html %}
+<div class="container {{ page.class | default: '' }}" >
+    <section role="main" >
+        <article>
+            <header>
+                <h2 class="text-xs-center" >{{ page.title }}</h2>
+            </header>
+            <main>
+                {{ content }}
+            </main>
+        </article>
+    </section>
+</div>
