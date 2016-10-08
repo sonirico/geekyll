@@ -5,9 +5,11 @@ layout: default
 <div class="container {{ page.class | default: '' }}" >
     <section role="main" >
         <article>
+            {% if page.title %}
             <header>
                 <h2 class="text-xs-center" >{{ page.title }}</h2>
             </header>
+            {% endif %}
             <main>
                 {{ content }}
             </main>
