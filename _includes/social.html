@@ -7,7 +7,7 @@
 
     {% assign r_social = site.data.social  | where: 'platform', u_social_platform | first %}
     {% if r_social %}
-        <a href="{{ r_social.url }}/{{ u_social_username }}" title="Check my {{ r_social.name }} profile" ><!--
+        <a href="{{ r_social.url }}/{{ u_social_username }}" title="{{ r_social.title }}" ><!--
             --><i class="svg-icon {{ r_social.icon }}" aria-hidden="true" ></i><!--
         --></a>
     {% endif %}
