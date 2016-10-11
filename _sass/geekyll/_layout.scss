@@ -39,6 +39,16 @@ $main-color: #4785ff;
   margin: 2rem 0;
 }
 
+section[role="main"] {
+  article {
+    header {
+      h1 {
+        line-height: 200%;
+      }
+    }
+  }
+}
+
 
 /* Remove that ugly outline effect */
 * { outline: none !important; }

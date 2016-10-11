@@ -1,5 +1,11 @@
 // Import bootstrap4-alpha4
 @import 'geekyll/bootstrap4alpha4/bootstrap';
+@import 'geekyll/bootstrap4alpha4/variables';
+
+// Fonts
+@import 'https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700';
+$font-family: 'Rubik', Helvetica, Arial, sans-serif !default;
+$font-size: 17px !default;
 
 // Tags
 .tag-area {
@@ -16,6 +22,7 @@
 
 // Import partials
 @import 
+	"geekyll/typography",
     "geekyll/layout",
     "geekyll/pages",
     "geekyll/social",

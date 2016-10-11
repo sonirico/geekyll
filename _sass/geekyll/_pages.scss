@@ -6,6 +6,49 @@
     }
 }
 
+.no-margin-no-padding {
+    margin: 0;
+    padding: 0;
+}
+
+// Features "portfolio" section
+.portfolio-page {
+
+    .project {
+
+        margin-top: 10px;
+        margin-bottom: 20px;
+
+        .project-info {
+
+            h1, h2, h3, h4, h5, h6 {
+                font-size: 20px;
+            }
+
+            background-color: #f5f5f5;
+            padding: 50px;
+
+            .description {
+                @extend .text-justify;
+                font-size: 15px;
+            }
+
+            .technologies {
+                @extend .m-x-auto;
+                @extend .text-xs-center;
+            }
+        }
+
+        .project-image {
+            padding: 0;
+
+            img {
+                @extend .img-fluid;
+            }
+        }
+    }
+}
+
 // Features "nosotros" section
 
 .us-page {
@@ -14,7 +57,39 @@
         @extend .m-x-auto;
         @extend .d-block;
         @extend .img-fluid;
-        width: 40%;
+        width: 80%;
         margin: 2rem;
     }
+
+    div.description {
+        @extend .text-justify;
+    }
+
+    // Greater images on small devices
+    @include media-breakpoint-up(sm) {
+        img {
+            width: 70%;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        img {
+            width: 50%;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        img {
+            width: 40%;
+        }
+    }
 }
+
+
+/* Small. Above 34em (544px) */
+
+/* Medium. Above 48em (768px) */
+
+/* Large. Above 62em (992px) */
+
+/* Extra large. Above 75em (1200px) */
