@@ -14,7 +14,7 @@
             {% if site.logo %}
             <img src="{{ site.logo | prepend: site.web_assets }}" class="logo" alt="" title="" />
             {% endif %}
-            <a class="navbar-brand hidden-xs-down" href="{{ site.url }}">{{ site.title }}</a>
+            <a class="navbar-brand hidden-xs-down brand" href="{{ site.url }}">{{ site.title }}</a>
             <ul class="nav navbar-nav pull-xs-right">
                 {% include navigation.html %}
             </ul>

@@ -14,6 +14,11 @@ $main-color: #4785ff;
   border: 2px solid $main-color;
   border-radius: 0.25rem;
 
+  .brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
   .navbar-nav {
     .nav-item {
       .nav-link {

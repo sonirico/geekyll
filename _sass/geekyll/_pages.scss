@@ -1,8 +1,15 @@
 .container {
     section[role="main"] {
-        h1, h2, h3, h4, h5 {
-            @extend .text-xs-center;
-        }
+        header {
+            h1, h2, h3, h4, h5 {
+                @extend .text-xs-center;
+            }
+
+            p {
+                @extend .text-xs-center;
+                @extend .lead;
+            }
+        }        
     }
 }
 
@@ -18,8 +25,24 @@
 
         margin-top: 10px;
         margin-bottom: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.125);
 
         .project-info {
+
+            // Features organization button
+            a[role="button"] {
+                border-radius: 0;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+
+                @include media-breakpoint-down(sm) {
+                    padding: 10px;
+                    font-size: 20px;
+                }
+            }
+
+            // End button featuring
 
             h1, h2, h3, h4, h5, h6 {
                 font-size: 20px;
@@ -53,12 +76,12 @@
 
 .us-page {
     img {
-        @extend .img-rounded;
         @extend .m-x-auto;
         @extend .d-block;
         @extend .img-fluid;
         width: 80%;
         margin: 2rem;
+        border-radius: 0.25rem !important;
     }
 
     div.description {
@@ -85,6 +108,62 @@
     }
 }
 
+.presentation-page {
+
+    padding: 0;
+
+    .jumbotron {
+        background-color: #f1f3f3;
+        border-radius: 0;
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        padding: 2rem 1rem;
+
+        h1 {}
+        p {
+            padding: 1em;
+        }
+        img {}
+    }
+
+    .service {
+        p {
+            padding: 2em;
+
+            @include media-breakpoint-up (md) {
+                font-size: 0.9em;
+                padding: 0;
+            }
+        }
+        
+    }
+
+    .fa {
+        @extend .text-xs-center;
+        width: 100%;
+        line-height: 200%;
+        font-size: 2em; // .fa-2x
+
+        @include media-breakpoint-down(md) {
+            font-size: 3em; // .fa-3x
+        }
+
+        @include media-breakpoint-down(sm) {
+            font-size: 4em;// .fa-4x
+        }  
+    }
+
+    .fa-gamepad {
+        color: $main-color;
+    }
+
+    .fa-android {
+        color: #92c71c;
+    }
+
+    .fa-wrench {
+        color: grey;
+    }
+}
 
 /* Small. Above 34em (544px) */
 

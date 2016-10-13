@@ -12,7 +12,12 @@ class: full_page
     <section role="main">
         <article>
             <header>
-                <h1 class="text-xs-center">{{ c_page.title }}</h1>
+                <h1 class="text-xs-center">
+                    {{ c_page.title }}
+                </h1>
+                {% if c_page.summary %}
+                    <p>{{ c_page.summary }}</p>
+                {% endif %}
             </header>
             <main>
                 {{ c_page.content | liquefy }}
