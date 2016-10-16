@@ -3,8 +3,10 @@
     {% if c_page.title %}
     <li role="presentation" class="nav-item" >
         <a title="{{ c_page.title }}" href="#{{ c_page.title | downcase }}" class="nav-link" >
-            <!--href="{{ c_page.url | prepend: site.url }}" class="nav-link">-->
-            {{ c_page.title }}
+            {% if c_page.icon %}
+                <i class="fa {{ c_page.icon }}" aria-hidden="true" ></i>
+            {% endif %}
+            <span class="nav-link-text" >{{ c_page.title }}</span>
             {% if is_current %}
             <span class="sr-only">(página actual)</span>
             {% endif %}

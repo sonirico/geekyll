@@ -5,27 +5,38 @@ class: full_page
 
 {% assign custom_pages = site.pages | where: 'indexable', true | sort: 'priority' | reverse %}
 
-{% include header.html %}
+<div class="container-fluid"  >
+    <div class="row" >
+        <div class="col-md-3 col-lg-2 navbar-fixed-side" >
+            {% include header.html %}
+        </div>
 
-{% for c_page in custom_pages %}
-<div class="container {{ c_page.class | default: '' }}">
-    <section role="main">
-        <article>
-            <header>
-                <h1 id="{{ c_page.title | downcase }}" >
-                    {{ c_page.title }}
-                </h1>
-                {% if c_page.summary %}
-                    <p>{{ c_page.summary }}</p>
-                {% endif %}
-            </header>
-            <main>
-                {{ c_page.content | liquefy }}
-            </main>
-        </article>
-    </section>
+        <div class="col-md-9 col-lg-10 offset-md-3 offset-lg-2 content" >
+
+            {% for c_page in custom_pages %}
+            <div class="container {{ c_page.class | default: '' }}">
+                <section role="main">
+                    <article>
+                        <header>
+                            <a name="{{ c_page.title | downcase }}" />
+                            <h1 id="{{ c_page.title | downcase }}" >
+                                {{ c_page.title }}
+                            </h1>
+                            {% if c_page.summary %}
+                                <p>{{ c_page.summary }}</p>
+                            {% endif %}
+                        </header>
+                        <main>
+                            {{ c_page.content | liquefy }}
+                        </main>
+                    </article>
+                </section>
+            </div>
+            {% endfor %}
+
+            {% include footer.html %}
+        </div>            
+    </div> <!-- End .row -->
 </div>
-{% endfor %}
 
-{% include footer.html %} 
 {% include javascripts.html %}

@@ -1,23 +1,19 @@
-<div class="pos-f-t">
-    <nav class="navbar navbar-light bg-faded full-width">
-        <button class="navbar-toggler hidden-sm-up pull-xs-right" type="button" 
+<nav class="navbar pos-f-t">
+
+    <a class="navbar-brand nav-link" href="#">{{ site.title }}</a>
+    <a name="" />
+
+    <button class="navbar-toggler hidden-md-up pull-xs-right" type="button" 
             data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header">
-            <i class="fa fa-bars" aria-hidden="true"></i>
-        </button>
+        <i class="fa fa-bars" aria-hidden="true" ></i>
+    </button>
 
-        <a class="navbar-brand hidden-sm-up pull-xs-left" href="{{ site.url }}">{{ site.title }}</a>
+    <div class="clearfix" ></div>
 
-        <!-- The old trick did the trick -->
-        <span class="clearfix" ></span>
-
-        <div class="collapse navbar-toggleable-xs" id="navbar-header">
-            {% if site.logoss %}
-                <img src="{{ site.logo | prepend: site.web_assets }}" class="logo" alt="logo" title="" />
-            {% endif %}
-            <a class="navbar-brand hidden-xs-down" href="{{ site.url }}">{{ site.title }}</a>
-            <ul class="nav navbar-nav" role="tablist" >
-                {% include navigation.html %}
-            </ul>
-        </div>
-    </nav> <!-- /navbar -->
-</div>
+    <div class="collapse navbar-toggleable-sm" id="navbar-header" >
+        <ul class="nav navbar-nav">
+            {% include navigation.html %}
+        </ul>
+    </div>
+</nav>
+<!-- /navbar -->
