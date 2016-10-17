@@ -1,46 +1,7 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
-
-<script>
-    // Anchor animation
-    
-    // Bootstrap 4 breakpoints   xs: 0, sm: 544px, md: 768px, lg: 992px, xl: 1200px
-    const xs = 0, sm = 544, md = 768, lg = 992, xl = 1200;
-    const breakpoints = [xl, lg, md, sm, xs];
-    var currentOffset = 0;
-
-
-    jQuery(document).ready(function () {
-        var $root = jQuery('html, body');
-        
-        // Calculate offset
-        if (jQuery(window).width() <= md) {
-            currentOffset = parseInt(jQuery('#navbar-header').height());
-            console.log(currentOffset);
-        }
-        
-        jQuery('a.nav-link').click(function () {
-            $link = jQuery(this);
-            var anchorName = $link.attr('href').replace('#', ''), y = 0;
-
-            if (anchorName.length > 0) {
-                console.log(anchorName);
-                y = jQuery('a[name="' + anchorName + '"]').offset().top;
-            }
-
-            $root.animate({ scrollTop: y - currentOffset}, 'slow');
-        });
-
-        // scrollspy via javascript
-        jQuery('body').scrollspy({ 
-            target: '#navbar-header', 
-            offset: currentOffset + parseInt(jQuery('#navbar-header').css('line-height'))
-            // Navbar's height must be added'
-        })
-    });
-</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
 
 {% for js in site.extra_js %}
-<script src="{{ site.url }}/{{ js }}" ></script>
+    <script src="//{{ site.url }}/{{ js }}" ></script>
 {% endfor %}

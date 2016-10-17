@@ -15,6 +15,7 @@ body {
   background-color: $main-background-color;
 }
 
+
 // Navigation bar container
 .navbar-fixed-side {
 
@@ -150,19 +151,43 @@ body {
   }
 }
 
-/* Customize container */
-.container {
-  max-width: 46rem;
-  section[role="main"] {
-    background-color: $main-background-color;
-    article {
-      header {
-        h1 {
-          line-height: 200%;
-        }
-      }
-    }
+
+
+// Forms
+
+input.form-control {
+  border-radius: 0px;
+  height: 3rem;
+
+  &:invalid {
+    box-shadow: none;
   }
+}
+
+textarea.form-control {
+  border-radius: 0px;
+  resize: none;
+  height: 8rem;
+
+  &:invalid {
+    box-shadow: none;
+  }
+}
+
+button.btn {
+  border-radius: 0px;
+
+  // btn-block
+  @include media-breakpoint-down (sm) {
+    display: block;
+    width: 100%;
+  }
+}
+
+// Alerts
+
+.alert {
+  border-radius: 0px;
 }
 
 
