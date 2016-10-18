@@ -1,0 +1,20 @@
+<div class="row flex-items-xs-middle" >
+    {% if site.footer.copyright %}
+    <div class="col-md-4" >
+        <!-- Copyright -->
+        <p>{{ site.footer.copyright }}</p>
+    </div>
+    {% endif %}
+    {% if site.footer.socials %}
+    <div class="col-md-4" >
+        <!-- Social -->
+        {% include social.html social=site.footer.socials %}
+    </div>
+    {% endif %}
+    {% if site.footer.featuring %}
+    <div class="col-md-4" >
+        <!-- Featuring -->
+        <p>{{ site.footer.featuring }}</p>
+    </div>
+    {% endif %}
+</div>

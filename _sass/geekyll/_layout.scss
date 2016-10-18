@@ -2,6 +2,7 @@ $font-color: #373a3c;
 $main-color: #4785ff;
 $brand-color: white;
 $main-background-color: white;
+$light-background-color: #f7f7f9;
 
 // toggler
 $toggler-bounds: 50px;
@@ -67,7 +68,7 @@ body {
             // End trucating
 
             &.active {
-              background-color: #f7f7f9;
+              background-color: $light-background-color;
               border-right: 10px solid $main-color;
               font-weight: bold;
               padding-right: 20px;
@@ -190,6 +191,43 @@ button.btn {
   border-radius: 0px;
 }
 
+
+footer {
+  border-left: 10px solid $main-color;
+  border-right: 10px solid $main-color;
+  background-color: $light-background-color;
+
+  margin: 6rem 0 0 0;
+
+  .container-fluid {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    .social-container {
+        .fa {
+          background-color: transparent;
+          display: inline-block;
+          line-height: 1;
+          font-size: 2em;
+          padding: 0.4em;
+          border-radius: 0.1em;
+
+          &.fa-code { color: $social_livecoding !important; }
+          &.fa-envelope { color: $social_mail !important; }
+          &.fa-github { color: $social_github !important;}
+          &.fa-gitlab { color: $social_gitlab !important;}
+          &.fa-linkedin { color: $social_linkedin !important;}
+          &.fa-google-plus-square { color:$social_google-plus-square !important;}
+          &.fa-twitter { color: $social_twitter !important;}
+        }
+    }
+
+      p {
+        font-size: 0.8em;
+        margin: 0;
+      }
+  }
+}
 
 /* Remove that ugly outline effect */
 * { outline: none !important; }

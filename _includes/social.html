@@ -1,14 +1,14 @@
-{% assign user_socials = include.social %}
+{% assign item_socials = include.social %}
 
 <div class="social-container" >
-{% for u_social in user_socials %}
-    {% assign u_social_platform = u_social[0] %}
-    {% assign u_social_username = u_social[1] %}
+{% for item_social in item_socials %}
+    {% assign social_platform = item_social[0] %}
+    {% assign social_username = item_social[1] %}
 
-    {% assign r_social = site.data.social  | where: 'platform', u_social_platform | first %}
-    {% if r_social %}
-        <a href="{{ r_social.url }}{{ u_social_username }}" title="{{ r_social.title }}" ><!--
-            --><i class="svg-icon {{ r_social.icon }}" aria-hidden="true" ></i><!--
+    {% assign current_social = site.social_links | where: 'platform', social_platform | first %}
+    {% if current_social %}
+        <a href="{{ current_social.url }}{{ social_username }}" title="{{ current_social.title }}" ><!--
+            --><i class="{{ current_social.icon }}" aria-hidden="true" ></i><!--
         --></a>
     {% endif %}
 {% endfor %}

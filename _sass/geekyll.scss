@@ -15,10 +15,19 @@ $font-size: 17px !default;
 	font-weight: 600;
 	line-height: 1;
 	border-radius: 2px;
-	box-shadow: inset 0 -1px 0 rgba(0,0,0,0.12);
+	box-shadow: inset 0 -2px 0 rgba(0,0,0,0.12);
     color: white;
     background-color: rgb(32,125,229);
 }
+
+// Social colors
+$social_github: #4f4f4f;
+$social_livecoding: #4f4f4f;
+$social_mail: #c1c1c1;
+$social_gitlab: #fc6d26;
+$social_linkedin: #385d99;
+$social_google-plus-square: #d34836;
+$social_twitter: #00aced;
 
 // Import partials
 @import 

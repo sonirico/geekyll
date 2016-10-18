@@ -102,6 +102,27 @@
         @extend .text-justify;
     }
 
+    div.social-container {
+        i.fa {
+            color: white;
+            display: inline-block;
+            line-height: 1;
+            padding: 0.4em;
+            border-radius: 0.1em;
+            box-shadow: inset 0 -2px 0 rgba(0,0,0,0.12);
+
+            .fa {
+                &.fa-code { background-color: $social_livecoding; }
+                &.fa-envelope { background-color: $social_mail; }
+                &.fa-github { background-color: $social_github;}
+                &.fa-gitlab { background-color: $social_gitlab;}
+                &.fa-linkedin { background-color: $social_linkedin;}
+                &.fa-google-plus-square { background-color:$social_google-plus-square;}
+                &.fa-twitter { background-color: $social_twitter;}
+            }
+        }
+    }
+
     // Greater images on small devices
     @include media-breakpoint-up(sm) {
         img {
