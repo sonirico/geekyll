@@ -1,8 +1,8 @@
-# geekyll
+# geekyll [![Gem Version](https://badge.fury.io/rb/geekyll.svg)](https://badge.fury.io/rb/geekyll)
 
-Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes` and your sass in `_sass`. To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
+![geekyll sample implemetation](screenshot.png)
 
-TODO: Delete this and the text above, and describe your gem
+This theme has been created with one thing in mind: Displaying a summary of all site content in the landing page. Have you ever seen those landing pages (WordPress, usually) where "all" page layouts are displayed in the home page and accessible via scrolling? That's the idea.
 
 ## Installation
 
@@ -28,11 +28,109 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here. Describe your available layouts, includes, and/or sass.
+### Front-page system
+
+There are only two steps to follow in order to set up the front-page system:
+
+- Make your landing page extend the *index* layout, like:
+```yaml
+---
+layout: index
+---
+<!-- No content needed here -->
+```
+- Make your pages have the following attributes:
+  -  **indexable**: *Boolean*. set it to "true".
+  -  **priority**: *Integer*. The higher its value, the higher the position of the page in both the body and navigation bar.
+  -  **class**: *String*. HTML class attribute for customizing the page style via CSS.
+  -  **icon:**: *String*. Fontawesome class for setting the icon for the navigation display, e.g : `fa-rocket`.
+  
+### Other layouts:
+ 
+ * `root`: Sets the base structure for every sub-layout.
+ * `index`: The one you have to extend to use the front-page system.
+ * `post`: **Uncomplete**. This theme is not intended to cohabitate with blogs (yet)
+ * `page`:  this layout should be extended for single pages. When applies the front-page system attriubtes listed above, will be included in the landing page. Take in account that pages are still accessible via URI, e.g `example.org/portfolio`. This is useful for letting search engines know that your site is still divided into sections (by feed.xml)
+ 
+### Includes
+ 
+ * `analytics`: code required for tracking user activit through GA.
+ * `navigation`: will automatically search your pages for them to be listed.
+ * `image`: images can sometimes be large pieces of code. Include it every time you need to embeed images by passing the following params:
+   * //TODO: Add params
+ * `javascripts`: Contains js files to be included at the bottom of the document.
+ * `social`: Creates a list of social links in base to a map passed as an argument, .e.g:
+```yaml
+twitter: johndoe
+email: johndoe@foobar.com
+```
+* `opengrpah`: Meta tags for good looking media sharing.
+* `footer`: Three colums footer for copyright announcement,social links and featuring technologies.
+
+ 
+ ### _config.yml
+ 
+ This theme can be customized through:
+ 
+ * `google_analytics`: UA-XXXXX-X
+ * `social_links`: A list containing the available social platforms. E.g:
+ 
+```yaml
+social_links:
+  - platform: twitter
+    url: //twitter.com/
+    icon: fa fa-twitter
+    title: Check my Twitter profile
+  - platform: github
+    url: //github.com/
+    icon: fa fa-github
+    title: Check my Github repos
+  - platform: gitlab
+    url: //gitlab.com/
+    icon: fa fa-gitlab
+    title: Check my gitlab repos
+```
+
+ * `footer`: Footer data can be set like:
+ 
+```yaml
+footer:
+  copyright: Copyright &copy; 2014-2016 ...
+  featuring: Site made with A. Hosting by B.
+  socials:
+    github: katodia
+    twitter: katodians
+    email: info@katodia.com
+    googleplus: +Katodia-Desarrollo-Aplicaciones
+```
+
+ * `extra_js`: If you need to add more js or other misc files, do it like so:
+
+```yaml
+ extra_js:
+  - assets/js/contact-form.js
+  - assets/js/anchor-animation.js 
+```
+
+* `meta`: In case you need to specify more standard meta tags:
+
+```yaml
+meta: 
+  generator: Jekyll 3.2.1
+  keywords: web, development, game, design
+```
+
+Output:
+
+```html
+<meta name"generator" content="Jekyll 3.2.1" />
+<meta name"keywords" content="web, development, game, design" />
+```
+
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hello. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/sonirico/geekyll/issues. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## Development
 
