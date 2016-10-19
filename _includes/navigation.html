@@ -1,15 +1,11 @@
-{% for c_page in custom_pages %}
-    {% assign is_current = page.url == c_page.url %}
-    {% if c_page.title %}
+{% for p in include.pages %}
+    {% if p.title %}
     <li role="presentation" class="nav-item" >
-        <a title="{{ c_page.title }}" href="#{{ c_page.title | downcase }}" class="nav-link" >
-            {% if c_page.icon %}
-                <i class="fa {{ c_page.icon }}" aria-hidden="true" ></i>
+        <a title="{{ p.title }}" href="#{{ p.permalink | replace: '/', '' | downcase }}" class="nav-link" >
+            {% if p.icon %}
+                <i class="fa {{ p.icon }}" aria-hidden="true" ></i>
             {% endif %}
-            <span class="nav-link-text" >{{ c_page.title }}</span>
-            {% if is_current %}
-            <span class="sr-only">(página actual)</span>
-            {% endif %}
+            <span class="nav-link-text" >{{ p.title }}</span>
         </a>
     </li>
     {% endif %}

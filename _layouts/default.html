@@ -2,9 +2,24 @@
 layout: root
 ---
 
-{% include header.html %}
+<div class="container-fluid"  >
+    <div class="row" >        
+        <div class="col-md-3 col-lg-2 navbar-fixed-side" >
+            <header>
+                {% include header.html pages=site.pages %}
+            </header>
+        </div>
 
-{{ content }}
+        <div class="col-md-9 col-lg-10 offset-md-3 offset-lg-2 content" >
+            {{ content }}
+        </div>
+    </div>
+</div>
 
-{% include footer.html %}
+<footer>
+    <div class="container-fluid" >
+        {% include footer.html %}
+    </div>
+</footer>
+
 {% include javascripts.html %}
