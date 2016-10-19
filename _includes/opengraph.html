@@ -1,0 +1,14 @@
+{% if page.title %}
+<meta property="title" content="{{ page.title }} - {{ site.title }}" />
+{% else %}
+<meta property="title" content="{{ site.title }}" />
+{% endif %}
+
+{% if page.excerpt %}
+<meta property="description" content="{{ page.excerpt | strip_html | truncate: 140 }}" />
+{% else %}
+<meta property="description" content="{{ page.description | strip_html | truncate: 140 }}" />
+{% endif %}
+
+<meta property="url" content="{{ page.url }}" />
+<meta property="type" content="website" />

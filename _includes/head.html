@@ -1,15 +1,16 @@
+<!-- Common metas -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-
 <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 <meta name="robots" content="{{ site.meta.robots | default: 'index, follow' }}" />
-
 {% if site.meta.keywords %}
 <meta name="keywords" itemprop="keywords" content="{{ site.meta.keywords }}" />
 {% endif %}
-
 <meta name="generator" content="{{ site.meta.generator | default: 'Jekyll' }}" />
+
+<!-- Opengraph metas -->
+{% include opengraph.html %}
 
 <!--
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
