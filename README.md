@@ -4,6 +4,11 @@
 
 This theme has been created with one thing in mind: Displaying a summary of all site content in the landing page. Have you ever seen those landing pages (WordPress, usually) where "all" page layouts are displayed in the home page and accessible via scrolling? That's the idea.
 
+## Before you go
+
+* Live implementation: [katodia.gitlab.io](//katodia.gitlab.io). 
+* [Repo](//github.com/katodia/katodia.com)
+
 ## Installation
 
 Add this line to your Jekyll site's Gemfile:
@@ -116,15 +121,15 @@ footer:
 
 ```yaml
 meta: 
-  generator: Jekyll 3.2.1
   keywords: web, development, game, design
+  foo: bar
 ```
 
 Output:
 
 ```html
-<meta name"generator" content="Jekyll 3.2.1" />
 <meta name"keywords" content="web, development, game, design" />
+<meta name"foo" content="bar" />
 ```
 
 
