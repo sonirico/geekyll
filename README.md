@@ -4,6 +4,13 @@
 
 This theme has been created with one thing in mind: Displaying a summary of all site content in the landing page. Have you ever seen those landing pages (WordPress, usually) where "all" page layouts are displayed in the home page and accessible via scrolling? That's the idea.
 
+## What's included
+
+* __Google fonts__.
+* __Font awesome__. Bootstrap no longer support icons.
+* __Bootstrap 4 alpha4__. And since the whole folder of bootstrap4 is included, you can even have access to bootstrap variables and mixins! 
+* __jQuery 3.0.0__.
+
 ## Before you go
 
 * Live implementation: [katodia.gitlab.io](//katodia.gitlab.io). 
@@ -37,7 +44,7 @@ Or install it yourself as:
 
 There are only two steps to follow in order to set up the front-page system:
 
-- Make your landing page extend the *index* layout, like:
+- Make your default/landing page extend the *index* layout, like:
 ```yaml
 ---
 layout: index
