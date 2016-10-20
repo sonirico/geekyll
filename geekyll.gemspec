@@ -2,12 +2,12 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "geekyll"
-  spec.version       = "0.0.9"
+  spec.version       = "0.1.0"
   spec.authors       = ["sonirico"]
   spec.email         = ["marsanben92@hotmail.com"]
 
-  spec.summary       = "Geek jekyll itheme for cool organizations."
-  spec.description   = "Geekyll strong feature is a dynamic front-page system."
+  spec.summary       = "Geek jekyll theme for cool organizations."
+  spec.description   = "Geekyll strong feature is a dynamic front-page system. Featuring: Bootstrap 4, jQuery, Fontawesome."
   spec.homepage      = "https://github.com/sonirico/geekyll.git"
   spec.license       = "MIT"
 

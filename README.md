@@ -24,6 +24,12 @@ Add this line to your Jekyll site's Gemfile:
 gem "geekyll"
 ```
 
+Plus, add this another one to your _config.yml or to the `:jekyll_plugins` variable within your Gemfile. It is for processing *Liquid* tags manually.
+
+```ruby
+gem "liquefy", "~> 0.1.2"
+```
+
 And add this line to your Jekyll site:
 
 ```yaml
