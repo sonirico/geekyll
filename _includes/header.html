@@ -1,6 +1,7 @@
 <nav class="navbar pos-f-t" >
 
-    <a class="navbar-brand nav-link" href="#">{{ site.title }}</a>
+    {% assign index_anchor = site.navigation.default | '' %}
+    <a class="navbar-brand nav-link" href="#{{ site.navigation.default }}">{{ site.title }}</a>
 
     <button class="navbar-toggler hidden-md-up pull-xs-right" type="button" 
             data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header">
