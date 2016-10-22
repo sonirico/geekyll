@@ -20,7 +20,7 @@ layout: root
                     <article>
                         <header>
                             <a name="{{ c_page.permalink | replace: '/', '' | downcase }}" ></a>
-                            <h1 id="{{ c_page.permalink | replace: '/', '' | downcase }}" >
+                            <h1 id="{{ c_page.title | downcase }}" >
                                 {{ c_page.title }}
                             </h1>
                             {% if c_page.summary %}
