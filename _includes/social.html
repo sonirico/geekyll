@@ -7,7 +7,7 @@
 
     {% assign current_social = site.social_links | where: 'platform', social_platform | first %}
     {% if current_social %}
-        <a href="{{ current_social.url }}{{ social_username }}" title="{{ current_social.title }}" ><!--
+        <a href="{{ current_social.url }}{{ social_username }}" title="{{ current_social.title }}" target="_blank"><!--
             --><i class="{{ current_social.icon }}" aria-hidden="true" ></i><!--
         --></a>
     {% endif %}
