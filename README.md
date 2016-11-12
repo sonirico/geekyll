@@ -68,7 +68,7 @@ layout: index
  * `root`: Sets the base structure for every sub-layout.
  * `index`: The one you have to extend to use the front-page system.
  * `post`: **Uncomplete**. This theme is not intended to cohabitate with blogs (yet)
- * `page`:  this layout should be extended for single pages. When applies the front-page system attriubtes listed above, will be included in the landing page. Take in account that pages are still accessible via URI, e.g `example.org/portfolio`. This is useful for letting search engines know that your site is still divided into sections (by feed.xml)
+ * `page`: This layout should be extended for single pages. If they take part in the front-page system, will be included in the landing page. Take in account that pages are still accessible via URI, e.g `example.org/portfolio`. This is useful for let search engines know that your site is still divided into sections (by feed.xml)
  
 ### Includes
  
@@ -82,7 +82,7 @@ layout: index
 twitter: johndoe
 email: johndoe@foobar.com
 ```
-* `opengrpah`: Meta tags for good looking media sharing.
+* `opengrpah`: Meta tags for good-looking media sharing.
 * `footer`: Three colums footer for copyright announcement,social links and featuring technologies.
 
  
